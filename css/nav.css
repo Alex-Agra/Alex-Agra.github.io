@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    width: 100%;
+    background: #222222;
+    padding: 10px 40px 10px 70px;
+    border: 1px solid #000;
+    border-left: 0px;
+    border-right: 0px;
+    font-family: 'Montserrat', sans-serif;
+    color: #f2f2f2;
+    position: fixed;
+    z-index: 1;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+nav ul li.logo{
+    flex: 1;
+    font-size: 30px;
+    font-weight: 700px;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    transition: .3s ease-in-out;
+    color: cyan;
+}
+nav ul li.logo:hover{
+    color: #fff;
+}
+
+nav ul div.items{
+    padding: 0 25px;
+    display: inline-flex;
+}
+nav ul div.items a{
+    text-decoration: none;
+    font-size: 18px;
+    padding: 0 12px;
+    color: #f2f2f2;
+    transition: .3s ease-in-out;
+}
+nav ul div.items a:hover{
+    color: cyan;
+}
+nav ul .search-icon{
+    height: 35px;
+    width: 240px;
+    display: flex;
+    background: #f2f2f2;
+    border-radius: 5px;
+}
+nav ul .search-icon input{
+    height: 100%;
+    width: 200px;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    border-radius: 5px 0 0 5px;
+    color: #222222;
+    font-size: 16px;
+}
+nav ul .search-icon .icon{
+    height: 100%;
+    width: 40px;
+    line-height: 35px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+nav ul .search-icon .icon:hover{
+    background: #e6e6e6;
+}
+
+nav ul .search-icon .icon span{
+    color: #222222;
+    font-size: 18px
+}
+nav ul li.btn{
+    padding: 10px 0 10px 40px;
+    font-size: 25px;
+    display: none;
+}
+nav ul li.btn span{
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    line-height: 35px;
+    border: 1px solid #151515;
+    border-radius: 5px;
+    cursor: pointer;
+}
+nav ul li.btn span.show:before{
+    content: '\f00d';
+}
+
+
+@media screen and (max-width: 866px){
+    nav{
+        z-index: 1;
+        padding: 9px 10px 9px 40px;
+    }
+    nav ul div.items{
+        z-index: -1;
+        position: fixed;
+        top: -220px;
+        right: 0;
+        width: 100%;
+        background: #222222;
+        display: inline-block;
+        transition: top .4s;
+    }
+    nav ul div.items.show{
+        top: 60px;
+    }
+    nav ul div.items li{
+        text-align: center;
+        line-height: 30px;
+        margin: 30px 0;
+    }
+    nav ul div.items li a{
+        font-size: 18px;
+    }
+    nav ul li.btn{
+        display: block;
+        padding: 10px 0 10px 10px;
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 540px){
+    nav{
+        padding: 5px 10px 5px 20px;
+    }
+
+    nav ul li.btn{
+        padding: 10px 0 10px 10px;
+        font-size: 25px;
+    }
+    nav ul .search-icon{
+        height: 35px;
+        width: 140px;
+    }
+    nav ul .search-icon input{
+        height: 100%;
+        width: 100px;
+
+    }
+}
+
+@media screen and (max-width: 425px) {
+    nav ul li.logo{
+        font-size: 20px;
+        font-weight: 700px;
+    }
+}
+@media screen and (max-width: 356px){
+    nav ul .search-icon{
+        height: 30px;
+        width: 100px;
+        display: flex;
+        background: #f2f2f2;
+        border-radius: 5px;
+    }
+    nav ul .search-icon input{
+        height: 100%;
+        width: 60px;
+        border: none;
+        outline: none;
+        padding: 0 10px;
+        border-radius: 5px 0 0 5px;
+        color: #222222;
+        font-size: 13px;
+    }
+    nav ul .search-icon .icon{
+        height: 100%;
+        width: 40px;
+        line-height: 30px;
+        text-align: center;
+        border: 1px solid #ccc;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+    }
+}
